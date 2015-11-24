@@ -8,8 +8,9 @@ from db import DB
 def FirstRun():
     device_folders = glob.glob("/sys/bus/w1/devices/" + "28*")
     for folder in device_folders:
-        description = raw_input("ID: " + folder + " | Description: ")
-        t = Thermometer(folder, description)
+        id = folder.split('/')[-1]
+        description = raw_input("ID: " + id + " | Description: ")
+        t = Thermometer(id, description)
         thermometers.append(t)
 
 
