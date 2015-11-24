@@ -8,7 +8,6 @@ from db import DB
 class Thermometer():
     def __init__(self, file_id, description):
         self.db = DB()
-        conn.execute("PRAGMA busy_timeout = 30000")
         self.cursor = self.db.cursor
         self.db_save(file_id, description)
         self.file_id = file_id
