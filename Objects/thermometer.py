@@ -8,10 +8,11 @@ from db import DB
 class Thermometer():
     def __init__(self, file_id, description):
         self.db = DB()
+        conn.execute("PRAGMA busy_timeout = 30000")
         self.cursor = self.db.cursor
-        result = self.db_save(file_id, description)
-        self.file_id = result[0]
-        self.descripton = result[1]
+        self.db_save(file_id, description)
+        self.file_id = file_id
+        self.descripton = description
 
         os.system('modprobe w1-gpio')
         os.system('modprobe w1-therm')
@@ -40,6 +41,5 @@ class Thermometer():
 
     def db_save(self, file_id, description):
         self.cursor.execute("INSERT INTO thermometers VALUES (?,?)", (file_id, description))
-        self.cursor.execute("SELECT * FROM thermometers WHERE file_id = ?", (file_id,))
         self.db.connection.commit()
-        return self.cursor.fetchone()
+        self.db.connection.close()
