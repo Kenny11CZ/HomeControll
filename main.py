@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, 'Objects')
 from Objects.thermometer import Thermometer
 from Objects.db import DB
 

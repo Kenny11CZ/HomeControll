@@ -1,7 +1,9 @@
 import os
 import glob
 import time
-from Objects.db import DB
+import sys
+sys.path.insert(0, 'Objects')
+from db import DB
 
 class Thermometer():
     def __init__(self, file_id, description):
