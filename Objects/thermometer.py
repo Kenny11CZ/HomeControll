@@ -37,6 +37,7 @@ class Thermometer():
             temp_c = float(temp_string) / 1000.0
             return temp_c
 
+
     def db_save(self, file_id, description):
         self.cursor.execute("INSERT INTO thermometers VALUES (?,?)", (file_id, description))
         self.cursor.execute("SELECT * FROM thermometers WHERE file_id = ?", (file_id,))
