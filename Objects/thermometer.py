@@ -21,7 +21,7 @@ class Thermometer():
         self.device_file = device_folder + '/w1_slave'
 
     def read_temp_raw(self):
-        f = open(self.device_file, 'r')
+        f = open(self.device_file, 'rb')
         lines = f.readlines()
         f.close()
         return lines
