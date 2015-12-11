@@ -12,6 +12,7 @@ from db import DB
 
 database = DB
 thermometers = []
+thermometers = list(thermometers)
 
 
 def FirstRun():
@@ -22,7 +23,8 @@ def FirstRun():
         t = Thermometer(id, description)
         thermometers.append(t)
 def Initialize():
-    thermometers = Thermometer.LoadThermometers()
+    for t in Thermometer.LoadThermometers():
+        thermometers.append(t);
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('--mode', help='select mode', dest='mode')
