@@ -2,8 +2,6 @@ import os
 import sys
 import glob
 import argparse
-import time
-import threading
 import modes
 sys.path.insert(0, 'Objects')
 from thermometer import Thermometer

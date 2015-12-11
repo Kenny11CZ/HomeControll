@@ -1,3 +1,5 @@
+import time
+import threading
 __author__ = 'Kenny'
 
 #Modes
