@@ -10,6 +10,7 @@ def statistics(thermometers, time):
             f.write("#####\n"+str(datetime.datetime.now())+"\n")
             for x in thermometers:
                 print(x.description + "(" + x.file_id + "):" + x.GetTemp())
+        threading.Timer(time, LogTemperatures).start()
 
 
     threading.Timer(time, LogTemperatures).start()
