@@ -56,6 +56,6 @@ class Thermometer():
 
     @staticmethod
     def GetThermometers():
-        for x in db_get_all():
+        for x in Thermometer.db_get_all():
             print(x.description + x.GetTemp())
 
