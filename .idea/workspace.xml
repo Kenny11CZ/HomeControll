@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45f5d8b1-8eb1-49e8-bbfc-0c16bf261a23" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Objects/thermometer.py" afterPath="$PROJECT_DIR$/Objects/thermometer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HomeControll.iws" />
@@ -346,7 +344,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449866908482</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="6&#10;">
+      <created>1449867377022</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1449867377022</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -397,7 +401,8 @@
     <MESSAGE value="3" />
     <MESSAGE value="4" />
     <MESSAGE value="5" />
-    <option name="LAST_COMMIT_MESSAGE" value="5" />
+    <MESSAGE value="6&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="6&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
