@@ -12,7 +12,7 @@ def statistics(thermometers, time):
                 print(x.description + "(" + x.file_id + "):" + x.GetTemp())
 
 
-    threading.Timer(time, LogTemperatures()).start()
+    threading.Timer(time, LogTemperatures).start()
     print("Start measurement")
 
 
