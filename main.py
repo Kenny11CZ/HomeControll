@@ -35,7 +35,8 @@ else:
     Initialize()
 
 print("Starting in mode {0} and time {1}".format(results.mode, results.time))
-
+if results.mode == "statistics":
+    statistics()
 
 #Modes
 def statistics(time):
