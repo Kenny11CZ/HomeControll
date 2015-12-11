@@ -41,4 +41,4 @@ if results.mode == "statistics":
 elif results.mode == "init":
     exit(0)
 
-printf("ASYNC TEST")
+print("ASYNC TEST")
