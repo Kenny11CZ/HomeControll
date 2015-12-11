@@ -50,7 +50,6 @@ class Thermometer():
         db = DB()
         cursor = db.cursor
         result = cursor.execute("SELECT * FROM thermometers");
-        db.connection.close()
         return result;
 
 
