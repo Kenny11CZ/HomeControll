@@ -4,6 +4,7 @@ import glob
 import argparse
 import time
 import threading
+import modes
 sys.path.insert(0, 'Objects')
 from thermometer import Thermometer
 from db import DB
@@ -36,17 +37,6 @@ else:
 
 print("Starting in mode {0} and time {1}".format(results.mode, results.time))
 if results.mode == "statistics":
-    statistics()
-
-#Modes
-def statistics(time):
-    def start():
-        threading.Timer(time, LogTemperatures()).start()
-
-    def LogTemperatures():
-        with open('output.txt', 'w+') as f:
-            f.write("#####\n"+time.strftime("%d %m %Y %H:%M:%S")+"\n")
-            for x in thermometers:
-                print(x.description + "(" + x.file_id + "):" + x.GetTemp())
+    modes.statistics(results.time)
 
 
