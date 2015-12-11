@@ -7,8 +7,7 @@ from db import DB
 
 class Thermometer():
     def __init__(self, file_id, description):
-        self.db = DB()
-        self.cursor = self.db.cursor
+        self.db_init()
         self.db_save(file_id, description)
         self.file_id = file_id
         self.descripton = description
@@ -37,8 +36,26 @@ class Thermometer():
             temp_c = float(temp_string) / 1000.0
             return temp_c
 
+    def db_init(self):
+        self.db = DB()
+        self.cursor = self.db.cursor
 
     def db_save(self, file_id, description):
         self.cursor.execute("INSERT INTO thermometers VALUES (?,?)", (file_id, description))
         self.db.connection.commit()
         self.db.connection.close()
+
+    @staticmethod
+    def db_get_all():
+        db = DB()
+        cursor = db.cursor
+        result = cursor.execute("SELECT * FROM thermometers");
+        db.connection.close()
+        return result;
+
+
+    @staticmethod
+    def GetThermometers():
+        for x in db_get_all():
+            print(x.description + x.GetTemp())
+
