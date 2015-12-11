@@ -4,6 +4,7 @@ import threading
 
 #Modes
 def statistics(thermometers, time):
+    i = [None]
     i[0] = 1
     def LogTemperatures(thermometers):
         with open('output.txt', 'a+') as f:
