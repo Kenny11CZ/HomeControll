@@ -6,9 +6,10 @@ sys.path.insert(0, 'Objects')
 from db import DB
 
 class Thermometer():
-    def __init__(self, file_id, description):
+    def __init__(self, file_id, description, save = true):
         self.db_init()
-        self.db_save(file_id, description)
+        if save:
+            self.db_save(file_id, description)
         self.file_id = file_id
         self.descripton = description
 
@@ -58,5 +59,5 @@ class Thermometer():
         thermometers = []
         thermometers = list(thermometers)
         for x in Thermometer.db_get_all():
-            thermometers.append(Thermometer(x[0], x[1]))
+            thermometers.append(Thermometer(x[0], x[1], false))
         return thermometers
