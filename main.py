@@ -36,6 +36,6 @@ else:
 
 print("Starting in mode {0} and time {1}".format(results.mode, results.time))
 if results.mode == "statistics":
-    modes.statistics(results.time)
+    modes.statistics(thermometers, results.time)
 
 
