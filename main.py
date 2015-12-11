@@ -23,10 +23,11 @@ def Initialize():
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 
-parser.add_argument('--mode', help='select mode')
+parser.add_argument('--mode', help='select mode', dest='mode')
 
+results = parser.parse_args()
 
-print parser.parse_args(["--mode"])
+print results.mode
 
 if not os.path.isfile("HomeControll.db"):
     FirstRun()
