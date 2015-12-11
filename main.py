@@ -2,9 +2,12 @@ import os
 import sys
 import glob
 import argparse
+import time
+import threading
 sys.path.insert(0, 'Objects')
 from thermometer import Thermometer
 from db import DB
+
 
 
 database = DB
@@ -22,20 +25,27 @@ def Initialize():
     thermometers = Thermometer.LoadThermometers()
 
 parser = argparse.ArgumentParser(description='Process some integers.')
-
 parser.add_argument('--mode', help='select mode', dest='mode')
-
+parser.add_argument('--time', help='set delay', dest='time', type=int)
 results = parser.parse_args()
-
-print results.mode
 
 if not os.path.isfile("HomeControll.db"):
     FirstRun()
 else:
     Initialize()
 
+print("Starting in mode {0} and time {1}".format(results.mode, results.time))
 
 
-for x in thermometers:
-    print(x.description + x.GetTemp())
+#Modes
+def statistics(time):
+    def start():
+        threading.Timer(time, LogTemperatures()).start()
+
+    def LogTemperatures():
+        with open('output.txt', 'w+') as f:
+            f.write("#####\n"+time.strftime("%d %m %Y %H:%M:%S")+"\n")
+            for x in thermometers:
+                print(x.description + "(" + x.file_id + "):" + x.GetTemp())
+
 
