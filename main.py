@@ -8,12 +8,9 @@ sys.path.insert(0, 'Objects')
 from thermometer import Thermometer
 from db import DB
 
-
-
 database = DB
 thermometers = []
 thermometers = list(thermometers)
-
 
 def FirstRun():
     device_folders = glob.glob("/sys/bus/w1/devices/" + "28*")
@@ -27,7 +24,7 @@ def Initialize():
         thermometers.append(t);
 
 parser = argparse.ArgumentParser(description='Process some integers.')
-parser.add_argument('--mode', help='select mode', dest='mode')
+parser.add_argument('--mode', help='select mode(statistics, init)', dest='mode', required=True)
 parser.add_argument('--time', help='set delay', dest='time', type=int)
 results = parser.parse_args()
 
@@ -36,8 +33,12 @@ if not os.path.isfile("HomeControll.db"):
 else:
     Initialize()
 
-print("Starting in mode {0} and time {1}".format(results.mode, results.time))
+
+
 if results.mode == "statistics":
+    print("Starting in mode {0} and time {1}".format(results.mode, results.time))
     modes.statistics(thermometers, results.time)
+elif results.mode == "init":
+    exit(0)
 
-
+printf("ASYNC TEST")
