@@ -11,7 +11,7 @@ class Thermometer():
         if save:
             self.db_save(file_id, description)
         self.file_id = file_id
-        self.descripton = description
+        self.description = description
 
         os.system('modprobe w1-gpio')
         os.system('modprobe w1-therm')
