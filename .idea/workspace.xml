@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22077923" vertical-offset="0" max-vertical-offset="462">
-              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.18398269" vertical-offset="0" max-vertical-offset="462">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -438,7 +438,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449871518056</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="statistics 4">
+      <created>1449871745781</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1449871745781</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -500,7 +506,8 @@
     <MESSAGE value="statistics" />
     <MESSAGE value="statistics 2" />
     <MESSAGE value="statistics 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="statistics 3" />
+    <MESSAGE value="statistics 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="statistics 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -577,8 +584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22077923" vertical-offset="0" max-vertical-offset="462">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.18398269" vertical-offset="0" max-vertical-offset="462">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
       </provider>
