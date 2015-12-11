@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2943723" vertical-offset="0" max-vertical-offset="462">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.44155845" vertical-offset="0" max-vertical-offset="462">
+              <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
               <folding>
                 <element signature="e#21#36#0" expanded="true" />
               </folding>
@@ -508,7 +508,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449873159147</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="statistics 13">
+      <created>1449873420053</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1449873420053</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -553,7 +559,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="first run check&#10;" />
     <MESSAGE value="first run check 2&#10;" />
     <MESSAGE value="3" />
     <MESSAGE value="4" />
@@ -578,7 +583,8 @@
     <MESSAGE value="statistics 10" />
     <MESSAGE value="statistics 11" />
     <MESSAGE value="statistics 12" />
-    <option name="LAST_COMMIT_MESSAGE" value="statistics 12" />
+    <MESSAGE value="statistics 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="statistics 13" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -655,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2943723" vertical-offset="0" max-vertical-offset="462">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.44155845" vertical-offset="0" max-vertical-offset="462">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
           <folding>
             <element signature="e#21#36#0" expanded="true" />
           </folding>
