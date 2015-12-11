@@ -13,7 +13,7 @@ def statistics(thermometers, time):
                 f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         i[0] = i[0] + 1
-        printf("{0} iteration".format(i[0],))
+        print("{0} iteration".format(i[0],))
     print("Start measurement")
     threading.Timer(time, LogTemperatures, [thermometers]).start()
 
