@@ -6,6 +6,10 @@ from thermometer import Thermometer
 from db import DB
 
 
+database = DB
+thermometers = []
+
+
 def FirstRun():
     device_folders = glob.glob("/sys/bus/w1/devices/" + "28*")
     for folder in device_folders:
@@ -14,16 +18,16 @@ def FirstRun():
         t = Thermometer(id, description)
         thermometers.append(t)
 def Initialize():
-    Thermometer.GetThermometers()
+    thermometers = Thermometer.LoadThermometers()
 
-database = DB
-thermometers = []
-thermometers = list(thermometers)
+
 
 if not os.path.isfile("HomeControll.db"):
     FirstRun()
 else:
     Initialize()
+
+
 
 for x in thermometers:
     print(x.description + x.GetTemp())

@@ -54,7 +54,9 @@ class Thermometer():
 
 
     @staticmethod
-    def GetThermometers():
+    def LoadThermometers():
+        thermometers = []
+        thermometers = list(thermometers)
         for x in Thermometer.db_get_all():
-            print(x.description + x.GetTemp())
-
+            thermometers.append(Thermometer(x[0], x[1]))
+        return thermometers
