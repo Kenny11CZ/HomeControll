@@ -25,8 +25,8 @@ parser = argparse.ArgumentParser(description='Process some integers.')
 
 parser.add_argument('--mode', help='select mode')
 
-args = parser.parse_args()
-print args.accumulate(args.mode)
+
+print parser.parse_args(["--mode"])
 
 if not os.path.isfile("HomeControll.db"):
     FirstRun()
