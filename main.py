@@ -1,3 +1,4 @@
+__author__ = 'Kenny'
 import os
 import sys
 import glob

@@ -1,6 +1,7 @@
+__author__ = 'Kenny'
 import time
 import threading
-__author__ = 'Kenny'
+
 
 #Modes
 def statistics(time):
