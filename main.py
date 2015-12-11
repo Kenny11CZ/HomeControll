@@ -18,8 +18,8 @@ database = DB
 thermometers = []
 thermometers = list(thermometers)
 
-
-FirstRun()
+if not os.path.isfile("HomeControll.db"):
+    FirstRun()
 
 for x in thermometers:
     print(x.GetTemp())
