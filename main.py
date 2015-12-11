@@ -1,3 +1,4 @@
+import os
 import sys
 import glob
 sys.path.insert(0, 'Objects')
@@ -22,5 +23,5 @@ if not os.path.isfile("HomeControll.db"):
     FirstRun()
 
 for x in thermometers:
-    print(x.GetTemp())
+    print(x.description + x.GetTemp())
 
