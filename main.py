@@ -26,7 +26,6 @@ def Initialize():
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('--mode', help='select mode(statistics, init, send_statistics)', dest='mode', required=True)
 parser.add_argument('--time', help='set delay', dest='time', type=int)
-parser.add_argument('--email', help='email', dest='email')
 results = parser.parse_args()
 
 if not os.path.isfile("HomeControll.db"):
@@ -40,6 +39,6 @@ if results.mode == "statistics":
     print("Starting in mode {0} and time {1}".format(results.mode, results.time))
     active = modes.statistics(thermometers, results.time)
 elif results.mode == "send_statistics":
-    print("send email to: {0}".format(results.email))
+    print("Uploading to pastebin.org")
 elif results.mode == "init":
     exit(0)
