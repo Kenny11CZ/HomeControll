@@ -14,8 +14,10 @@ def statistics(thermometers, time):
         #    for x in thermometers:
         #        f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
         with open('output.txt', 'r+') as f:
-            data = json.load(f)
-
+            try:
+                data = json.load(f)
+            except:
+                data = list()
 
         temp[0] = {"time":str(datetime.datetime.now())}
         therms = list()
