@@ -34,10 +34,12 @@ else:
     Initialize()
 
 active = None
-
+import json
+data[0] = {"time":"123","thermometers":[{"name":"123","id":"123"}]}
+print(json.dump(data))
 if results.mode == "statistics":
     print("Starting in mode {0} and time {1}".format(results.mode, results.time))
-    active = modes.statistics(thermometers, results.time)
+    #active = modes.statistics(thermometers, results.time)
 elif results.mode == "send_statistics":
     print("Uploading to pastebin.org")
     modes.pastebin()
