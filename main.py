@@ -36,7 +36,7 @@ else:
 active = None
 import json
 data = [None]
-data[0] = {"time":"123","thermometers":[{"name":"123","id":"123"}]}
+data[0] = {"time":"123","thermometers":[{"name":"123","id":"123"}, {"name":"123","id":"123"}]}
 print(json.dump(data))
 if results.mode == "statistics":
     print("Starting in mode {0} and time {1}".format(results.mode, results.time))
