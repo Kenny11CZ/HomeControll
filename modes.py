@@ -30,7 +30,7 @@ def paastebin():
         print(response.status)
         if response.status == httplib.OK:
             print "Output from pastebin.org: "
-            printText (response.read())
+            print(response.read())
 
         httpServ.close()
 
