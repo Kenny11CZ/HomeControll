@@ -1,7 +1,7 @@
 __author__ = 'Kenny'
 import datetime
 import threading
-import json
+import os
 
 #Modes
 def statistics(thermometers, time):
