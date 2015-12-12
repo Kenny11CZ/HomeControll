@@ -1,6 +1,7 @@
 __author__ = 'Kenny'
 import datetime
 import threading
+import json
 
 #Modes
 def statistics(thermometers, time):
@@ -11,13 +12,16 @@ def statistics(thermometers, time):
             f.write("#####\n"+str(datetime.datetime.now())+"\n")
             for x in thermometers:
                 f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
+        with open('output2.txt', 'a+') as f:
+            for x in thermometers:
+                f.write(json.dump(x))
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         i[0] = i[0] + 1
         print("{0} iteration".format(i[0],))
     print("Start measurement")
     threading.Timer(time, LogTemperatures, [thermometers]).start()
 
-def paastebin():
+def pastebin():
     import requests, urllib
     with open('output.txt', 'r') as f:
         data = f.read()

@@ -40,6 +40,6 @@ if results.mode == "statistics":
     active = modes.statistics(thermometers, results.time)
 elif results.mode == "send_statistics":
     print("Uploading to pastebin.org")
-    modes.paastebin()
+    modes.pastebin()
 elif results.mode == "init":
     exit(0)
