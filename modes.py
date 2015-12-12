@@ -18,10 +18,14 @@ def statistics(thermometers, time):
     threading.Timer(time, LogTemperatures, [thermometers]).start()
 
 def paastebin():
-    import requests
+    import requests, urllib
     with open('output.txt', 'r') as f:
         data = f.read()
-        r = requests.post('http://requestb.in/1l28i7t1', params={'api_option':'paste'}, headers={'content-type':'application/x-www-form-urlencoded'})
+
+        values = { 'api_dev_key' : "1321323",
+                    'api_option' : "paste",
+                    'paste' : "13213132131" }
+        r = requests.post('http://requestb.in/1l28i7t1', params=urllib.urlencode(values), headers={'content-type':'application/x-www-form-urlencoded'})
         print "Output from pastebin.org: "
         print(r.text)
 
