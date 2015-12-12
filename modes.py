@@ -27,6 +27,7 @@ def paastebin():
                          .format("", "0", str(datetime.datetime.now() + " Temps", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read())))
 
         response = httpServ.getresponse()
+        print(response.status)
         if response.status == httplib.OK:
             print "Output from pastebin.org: "
             printText (response.read())
