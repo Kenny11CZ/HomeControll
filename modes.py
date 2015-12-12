@@ -17,8 +17,7 @@ def statistics(thermometers, time):
 
         data = [None]
         data[0] = {"time":str(datetime.datetime.now())}
-        therms = [None]
-        therms = list(therms)
+        therms = list()
         for i, t in enumerate(thermometers):
             therms.append({"id": t.file_id, "name": t.description, "temp": t.GetTemp()})
         data[0]["thermometers"] = therms
