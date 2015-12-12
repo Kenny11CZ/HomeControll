@@ -25,7 +25,7 @@ def paastebin():
         values = { 'api_dev_key' : "1321323",
                     'api_option' : "paste",
                     'paste' : "13213132131" }
-        r = requests.post('http://requestb.in/1l28i7t1', params=urllib.urlencode(values), headers={'content-type':'application/x-www-form-urlencoded'})
+        r = requests.post('http://requestb.in/1l28i7t1', params=urllib.urlencode(values), headers={'content-type':'application/x-www-form-urlencoded', 'Content-Length': 80})
         print "Output from pastebin.org: "
         print(r.text)
 

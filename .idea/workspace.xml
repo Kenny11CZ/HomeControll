@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.7193764" vertical-offset="136" max-vertical-offset="714">
-              <caret line="27" column="88" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
+              <caret line="27" column="167" selection-start-line="27" selection-start-column="167" selection-end-line="27" selection-end-column="167" />
               <folding>
                 <element signature="e#21#36#0" expanded="true" />
               </folding>
@@ -730,7 +730,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449886047826</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="pastebin implementation 3 FINAL&#10;">
+      <created>1449886612241</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1449886612241</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -878,7 +884,7 @@
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7193764" vertical-offset="136" max-vertical-offset="714">
-          <caret line="27" column="88" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
+          <caret line="27" column="167" selection-start-line="27" selection-start-column="167" selection-end-line="27" selection-end-column="167" />
           <folding>
             <element signature="e#21#36#0" expanded="true" />
           </folding>
