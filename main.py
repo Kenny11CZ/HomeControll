@@ -35,6 +35,7 @@ else:
 
 active = None
 import json
+data = [None]
 data[0] = {"time":"123","thermometers":[{"name":"123","id":"123"}]}
 print(json.dump(data))
 if results.mode == "statistics":
