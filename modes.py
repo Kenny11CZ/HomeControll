@@ -21,7 +21,7 @@ def paastebin():
     import requests
     with open('output.txt', 'r+') as f:
         r = requests.post('http://requestb.in/1l28i7t1', params='api_option={0}&api_paste_private={1}&api_paste_expire_date={2}&api_dev_key={3}&api_paste_code={4}'
-                         .format("paste", "0", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read()))
+                         .format("paste", "0", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read()), headers={'content-type':'application/x-www-form-urlencoded'})
         print "Output from pastebin.org: "
         print(r.text)
 
