@@ -18,8 +18,9 @@ def statistics(thermometers, time):
         data = [None]
         data[0] = {"time":str(datetime.datetime.now())}
         therms = [None]
+        therms = list(therms)
         for i, t in enumerate(thermometers):
-            therms[i] = {"id": t.file_id, "name": t.description, "temp": t.GetTemp()}
+            therms.append({"id": t.file_id, "name": t.description, "temp": t.GetTemp()})
         data[0]["thermometers"] = therms
         print(json.dumps(data))
         threading.Timer(time, LogTemperatures, [thermometers, f]).start()
