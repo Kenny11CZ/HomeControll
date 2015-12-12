@@ -5,8 +5,8 @@ import json
 
 #Modes
 def statistics(thermometers, time):
-    i = [None]
-    i[0] = 1
+    iteration = [None]
+    iteration[0] = 1
     def LogTemperatures(thermometers):
         with open('output.txt', 'a+') as f:
             f.write("#####\n"+str(datetime.datetime.now())+"\n")
@@ -14,10 +14,10 @@ def statistics(thermometers, time):
                 f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
         with open('output2.txt', 'a+') as f:
             for x in thermometers:
-                f.write(json.dump(x))
+                f.write(json.dumps(c, default=lambda o: o.__dict__))
         threading.Timer(time, LogTemperatures, [thermometers]).start()
-        i[0] = i[0] + 1
-        print("{0} iteration".format(i[0],))
+        iteration[0] = iteration[0] + 1
+        print("{0} iteration".format(iteration[0],))
     print("Start measurement")
     threading.Timer(time, LogTemperatures, [thermometers]).start()
 
