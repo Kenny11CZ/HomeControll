@@ -15,8 +15,6 @@ def statistics(thermometers, time):
 
         #with open('output2.txt', 'ra+') as f:
         if iteration[0] != 0:
-            f.seek(-2, os.SEEK_END)
-            f.truncate()
             f.write(",")
         f.write("{{\"time\":\"{0}\",\"thermometers\":[".format(str(datetime.datetime.now(),)))
         for i, x in enumerate(thermometers):
@@ -28,7 +26,7 @@ def statistics(thermometers, time):
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
     print("Start measurement")
-    with open('output2.txt', 'rab+') as f:
+    with open('output2.txt', 'ra+') as f:
         f.write("{\"records\":[")
         threading.Timer(time, LogTemperatures, [thermometers, f]).start()
 
