@@ -7,30 +7,30 @@ import os
 def statistics(thermometers, time):
     iteration = [None]
     iteration[0] = 0
-    def LogTemperatures(thermometers):
-        with open('output.txt', 'a+') as f:
-            f.write("#####\n"+str(datetime.datetime.now())+"\n")
-            for x in thermometers:
-                f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
+    def LogTemperatures(thermometers, f):
+        #with open('output.txt', 'a+') as f:
+        #    f.write("#####\n"+str(datetime.datetime.now())+"\n")
+        #    for x in thermometers:
+        #        f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
 
-        with open('output2.txt', 'ra+') as f:
-            if iteration[0] != 0:
-                f.seek(-2, os.SEEK_END)
-                f.truncate()
+        #with open('output2.txt', 'ra+') as f:
+        if iteration[0] != 0:
+            f.seek(-2, os.SEEK_END)
+            f.truncate()
+            f.write(",")
+        f.write("{{\"time\":\"{0}\",\"thermometers\":[".format(str(datetime.datetime.now(),)))
+        for i, x in enumerate(thermometers):
+            f.write("{{\"id\":\"{0}\",\"name\":\"{1}\",\"temperature\":\"{2}\"}}".format(x.file_id, x.description, x.GetTemp()))
+            if len(thermometers) - 1 != i:
                 f.write(",")
-            f.write("{{\"time\":\"{0}\",\"thermometers\":[".format(str(datetime.datetime.now(),)))
-            for i, x in enumerate(thermometers):
-                f.write("{{\"id\":\"{0}\",\"name\":\"{1}\",\"temperature\":\"{2}\"}}".format(x.file_id, x.description, x.GetTemp()))
-                if len(thermometers) - 1 != i:
-                    f.write(",")
-            f.write("]}]}")
-        threading.Timer(time, LogTemperatures, [thermometers]).start()
+        f.write("]}]}")
+        threading.Timer(time, LogTemperatures, [thermometers, f]).start()
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
     print("Start measurement")
-    with open('output2.txt', 'a+') as f:
+    with open('output2.txt', 'ra+') as f:
         f.write("{\"records\":[")
-    threading.Timer(time, LogTemperatures, [thermometers]).start()
+        threading.Timer(time, LogTemperatures, [thermometers, f]).start()
 
 def pastebin():
     import requests, urllib
