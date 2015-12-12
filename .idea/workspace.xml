@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7572383" vertical-offset="34" max-vertical-offset="663">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.7951002" vertical-offset="34" max-vertical-offset="646">
+              <caret line="23" column="84" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
               <folding>
                 <element signature="e#21#36#0" expanded="true" />
               </folding>
@@ -712,7 +712,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449885496270</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="pastebin implementation 3 FINAL&#10;">
+      <created>1449885602381</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1449885602382</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -757,7 +763,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="statistics" />
     <MESSAGE value="statistics 2" />
     <MESSAGE value="statistics 3" />
     <MESSAGE value="statistics 4" />
@@ -782,7 +787,8 @@
     <MESSAGE value="&#10;" />
     <MESSAGE value="pastebin implementation 2&#10;" />
     <MESSAGE value="pastebin implementation 2 FINAL&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="pastebin implementation 2 FINAL&#10;" />
+    <MESSAGE value="pastebin implementation 3 FINAL&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="pastebin implementation 3 FINAL&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -859,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7572383" vertical-offset="34" max-vertical-offset="663">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.7951002" vertical-offset="34" max-vertical-offset="646">
+          <caret line="23" column="84" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
           <folding>
             <element signature="e#21#36#0" expanded="true" />
           </folding>
