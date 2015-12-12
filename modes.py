@@ -15,7 +15,7 @@ def statistics(thermometers, time):
 
         with open('output2.txt', 'a+') as f:
             f.write("{{\"time\":\"{0}\",\"thermometers\":[".format(str(datetime.datetime.now(),)))
-            for i, x in thermometers:
+            for i, x in enumerate(thermometers):
                 f.write("{{\"id\":\"{0}\",\"name\":\"{1}\",\"temperature\":\"{2}\"}}".format(x.file_id, x.description, x.GetTemp()))
                 if thermometers.lenght() - 1 != i:
                     f.write(",")
