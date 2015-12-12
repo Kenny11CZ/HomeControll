@@ -18,7 +18,7 @@ def statistics(thermometers, time):
                 data = json.load(f)
             except:
                 data = list()
-
+        temp = [None]
         temp[0] = {"time":str(datetime.datetime.now())}
         therms = list()
         for i, t in enumerate(thermometers):

@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="969">
-              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.48433048" vertical-offset="0" max-vertical-offset="1003">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
               <folding>
                 <element signature="e#21#36#0" expanded="true" />
               </folding>
@@ -907,7 +907,19 @@
       <option name="project" value="LOCAL" />
       <updated>1449956137995</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="json">
+      <created>1449956577545</created>
+      <option name="number" value="00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1449956577545</updated>
+    </task>
+    <task id="LOCAL-00095" summary="json">
+      <created>1449957034626</created>
+      <option name="number" value="00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1449957034626</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1092,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="969">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.48433048" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding>
             <element signature="e#21#36#0" expanded="true" />
           </folding>
