@@ -18,12 +18,13 @@ def statistics(thermometers, time):
     threading.Timer(time, LogTemperatures, [thermometers]).start()
 
 def paastebin():
-    import httplib, urllib
+    import httplib
     with open('output.txt', 'r+') as f:
-        httpServ = httplib.HTTPConnection("requestb.in/1l28i7t1", 80)
+        httpServ = httplib.HTTPConnection("http://requestb.in/1l28i7t1", 80)
         httpServ.connect()
-        params = urllib.urlencode({'api_option': "paste", 'api_paste_private': 0, 'api_paste_expire_date': "10M", 'api_dev_key': "e8ef585291dc675b7bf9e7b66e340326",'api_paste_code': f.read()})
-        httpServ.request('POST', '', params)
+        httpServ.request('POST', '',
+                         'api_option={0}&api_user_key={1}&api_paste_private={2}&api_paste_name={3}&api_paste_expire_date={4}&api_dev_key={5}&api_paste_code={6}'
+                         .format("paste", "", "0", str(datetime.datetime.now()) + " Temps", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read()))
 
         response = httpServ.getresponse()
         print(response.status)

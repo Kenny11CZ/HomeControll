@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83296216" vertical-offset="51" max-vertical-offset="765">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.454343" vertical-offset="204" max-vertical-offset="782">
+              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
               <folding>
                 <element signature="e#21#36#0" expanded="true" />
               </folding>
@@ -658,7 +658,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449880677507</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="pastebin implementation 2&#10;">
+      <created>1449880745831</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1449880745831</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -805,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83296216" vertical-offset="51" max-vertical-offset="765">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.454343" vertical-offset="204" max-vertical-offset="782">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding>
             <element signature="e#21#36#0" expanded="true" />
           </folding>
