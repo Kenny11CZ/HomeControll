@@ -2,6 +2,7 @@ __author__ = 'Kenny'
 import datetime
 import threading
 import os
+import json
 
 #Modes
 def statistics(thermometers, time):
@@ -13,21 +14,19 @@ def statistics(thermometers, time):
         #    for x in thermometers:
         #        f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
 
-        #with open('output2.txt', 'ra+') as f:
-        if iteration[0] != 0:
-            f.write(",")
-        f.write("{{\"time\":\"{0}\",\"thermometers\":[".format(str(datetime.datetime.now(),)))
-        for i, x in enumerate(thermometers):
-            f.write("{{\"id\":\"{0}\",\"name\":\"{1}\",\"temperature\":\"{2}\"}}".format(x.file_id, x.description, x.GetTemp()))
-            if len(thermometers) - 1 != i:
-                f.write(",")
-        f.write("]}]}")
+
+        data = [None]
+        data[0] = {"time":str(datetime.datetime.now())}
+        therms = [None]
+        for i, t in iteration(thermometers):
+            therms[i] = {"id": t.file_id, "name": t.description, "temp": t.GetTemp()}
+        data[0]["thermometers"] = therms
+        print(json.dumps(data))
         threading.Timer(time, LogTemperatures, [thermometers, f]).start()
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
     print("Start measurement")
     with open('output2.txt', 'ra+') as f:
-        f.write("{\"records\":[")
         threading.Timer(time, LogTemperatures, [thermometers, f]).start()
 
 def pastebin():
