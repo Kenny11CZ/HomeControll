@@ -23,7 +23,7 @@ def paastebin():
         httpServ = httplib.HTTPConnection("pastebin.com", 80)
         httpServ.connect()
         httpServ.request('POST', '/api/api_post.php',
-                         'api_option={0}&api_user_key={1}&api_paste_private={2}&api_paste_name={3}&api_paste_expire_date={4}&api_dev_key={5}&api_paste_code={6}'
+                         'api_user_key={1}&api_paste_private={2}&api_paste_name={3}&api_paste_expire_date={4}&api_dev_key={5}&api_paste_code={6}'
                          .format("paste", "", "0", str(datetime.datetime.now()) + " Temps", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read()))
 
         response = httpServ.getresponse()
