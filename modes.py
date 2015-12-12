@@ -27,7 +27,7 @@ def statistics(thermometers, time):
         data.append(temp)
         print(json.dumps(data))
         with open('output.txt', 'w+') as f:
-            f.write(data)
+            f.write(json.dumps(data))
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
