@@ -20,7 +20,7 @@ def statistics(thermometers, time):
 def paastebin():
     import httplib
     with open('output.txt', 'r+') as f:
-        httpServ = httplib.HTTPConnection("http://pastebin.com/", 80)
+        httpServ = httplib.HTTPConnection("pastebin.com", 80)
         httpServ.connect()
         httpServ.request('POST', '/api/api_post.php',
                          'api_option=paste&api_user_key={0}&api_paste_private={1}&api_paste_name={2}&api_paste_expire_date={3}&api_dev_key={4}&api_paste_code={5}'
