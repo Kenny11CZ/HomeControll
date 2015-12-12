@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4922049" vertical-offset="204" max-vertical-offset="782">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.83296216" vertical-offset="51" max-vertical-offset="765">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
               <folding>
                 <element signature="e#21#36#0" expanded="true" />
               </folding>
@@ -634,7 +634,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449879816308</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="pastebin implementation 2">
+      <created>1449879875827</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1449879875827</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -679,7 +685,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="arg parser 5" />
     <MESSAGE value="arg parser 6" />
     <MESSAGE value="arg parser 7" />
     <MESSAGE value="statistics" />
@@ -704,7 +709,8 @@
     <MESSAGE value="some tests" />
     <MESSAGE value="pastebin implementation" />
     <MESSAGE value="pastebin implementation 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="pastebin implementation 2" />
+    <MESSAGE value="&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -781,8 +787,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4922049" vertical-offset="204" max-vertical-offset="782">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.83296216" vertical-offset="51" max-vertical-offset="765">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
           <folding>
             <element signature="e#21#36#0" expanded="true" />
           </folding>
