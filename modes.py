@@ -14,9 +14,9 @@ def statistics(thermometers, time):
                 f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
 
         with open('output2.txt', 'a+') as f:
-            f.write("{{\"time\":{0},\"thermometers\":[".format(str(datetime.datetime.now(),)))
+            f.write("{{\"time\":\"{0}\",\"thermometers\":[".format(str(datetime.datetime.now(),)))
             for x in thermometers:
-                f.write("{{\"id:\"\"{0}\",\"name:{1}\",\"temperature\":\"{2}\"}},".format(x.file_id, x.description, x.GetTemp()))
+                f.write("{{\"id\":\"{0}\",\"name\":\"{1}\",\"temperature\":\"{2}\"}},".format(x.file_id, x.description, x.GetTemp()))
             f.write("]}}")
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         iteration[0] = iteration[0] + 1
