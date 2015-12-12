@@ -13,13 +13,17 @@ def statistics(thermometers, time):
             for x in thermometers:
                 f.write("{0}({1}):{2}\n".format(x.description, str(x.file_id), str(x.GetTemp())))
 
-        with open('output2.txt', 'a+') as f:
+        with open('output2.txt', 'ra+') as f:
+            if iteration[0] != 0:
+                f.seek(-2, os.SEEK_END)
+                f.truncate()
+                f.write(",")
             f.write("{{\"time\":\"{0}\",\"thermometers\":[".format(str(datetime.datetime.now(),)))
             for i, x in enumerate(thermometers):
                 f.write("{{\"id\":\"{0}\",\"name\":\"{1}\",\"temperature\":\"{2}\"}}".format(x.file_id, x.description, x.GetTemp()))
                 if len(thermometers) - 1 != i:
                     f.write(",")
-            f.write("]},")
+            f.write("]}]}")
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
