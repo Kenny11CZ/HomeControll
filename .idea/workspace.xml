@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87082404" vertical-offset="0" max-vertical-offset="833">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.83296216" vertical-offset="0" max-vertical-offset="867">
+              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -789,7 +789,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449948968850</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="json">
+      <created>1449949123296</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1449949123296</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -972,8 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87082404" vertical-offset="0" max-vertical-offset="833">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.83296216" vertical-offset="0" max-vertical-offset="867">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
           <folding />
         </state>
       </provider>
