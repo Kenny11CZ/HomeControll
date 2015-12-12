@@ -24,7 +24,7 @@ def paastebin():
         httpServ.connect()
         httpServ.request('POST', '/api/api_post.php',
                          'api_option=paste&api_user_key={0}&api_paste_private={1}&api_paste_name={2}&api_paste_expire_date={3}&api_dev_key={4}&api_paste_code={5}'
-                         .format("", "0", str(datetime.datetime.now()) + " Temps", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read())))
+                         .format("", "0", str(datetime.datetime.now()) + " Temps", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read()))
 
         response = httpServ.getresponse()
         print(response.status)
