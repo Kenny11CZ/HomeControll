@@ -20,7 +20,7 @@ def statistics(thermometers, time):
 def paastebin():
     import requests
     with open('output.txt', 'r+') as f:
-        r = requests.post('http://requestb.in/1l28i7t1', params='api_option={0}&api_user_key={1}&api_paste_private={2}&api_paste_name={3}&api_paste_expire_date={4}&api_dev_key={5}&api_paste_code={6}'
+        r = requests.post('http://pastebin.com/api/api_post.php', params='api_option={0}&api_user_key={1}&api_paste_private={2}&api_paste_name={3}&api_paste_expire_date={4}&api_dev_key={5}&api_paste_code={6}'
                          .format("paste", "", "0", str(datetime.datetime.now()) + " Temps", "10M", "e8ef585291dc675b7bf9e7b66e340326", f.read()))
         print "Output from pastebin.org: "
         print(r.text)
