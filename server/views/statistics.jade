@@ -1,14 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div
+  h1 Statistics
   table
     thead
-      tr: th Posts
+      tr
+        th Time
+        th(colspan="#{data[0][0].thermometers.length*2}") Thermomethers
     tbody
-      each post, i in userPosts
+      for record in data
         tr
           td 
-            a(href='/admin/post/' + post.id) #{post.author} - #{post.title}
+            span.time #{record[0].time}
+          for thermometer in record[0].thermometers
+            td.name
+              span #{thermometer.name}
+            td.temp
+              span #{thermometer.temp}
+  script(src="/socket.io/socket.io.js")
+  script.
+    var socket = io.connect('http://localhost:80');
+    socket.on('filechanged', function(data) {
+        location.reload();
+    });

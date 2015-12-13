@@ -2,6 +2,9 @@
 var express = require('express');
 var routes = require('./routes.js')
 var app = express();
+
+var fs = require("fs");
+
 app.set('view engine', 'jade');
 app.use('/', routes);
 
@@ -11,4 +14,16 @@ var server = app.listen(80, function () {
   var port = server.address().port;
 
   console.log('Example app listening at http://%s:%s', host, port);
+});
+var io = require('socket.io')(server);
+io.on('connection', function(client) {  
+    console.log('Client connected...');
+
+    client.on('join', function(data) {
+        console.log(data);
+    });
+
+
+    fs.watchFile('temperatures.txt', {persistent:true, interval:1000}, function(data){io.sockets.emit('filechanged', ''); console.log('filechanged')});
+
 });

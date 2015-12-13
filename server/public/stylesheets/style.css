@@ -6,3 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
+
+table{
+	border-collapse: collapse;
+}
+table, td, tr{
+	border: 0;
+	padding: 0px;
+	margin: 0px;
+}
+td, th{
+	text-align: left;
+	padding: 8px;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+th{
+    background-color: #4CAF50;
+    color: white;
+}
+.name{
+	border-left: 1px solid #bbb;
+}

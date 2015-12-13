@@ -12,9 +12,9 @@ router.get('/statistics', function(req, res, next) {
 	       return console.error(err);
 	       res.render('statistics', {data: ""});
 	   }
-	   console.log("Asynchronous read: " + data.toString());
-	   res.render('statistics', {data: data.toString()});
+	   res.render('statistics', {data: JSON.parse(data.toString())});
 	});
 });
+router.use("/public", express.static('public'));
 
 module.exports = router;

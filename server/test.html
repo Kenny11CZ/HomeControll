@@ -1,23 +1,5 @@
 <script>
-var temp = "#####\
-2015-12-12 00:18:36.106699\
-Venku(28-0114544b18ff):22.875\
-Doma(28-0114539c82ff):22.687\
-Koupelna(28-011453df6aff):23.0\
-#####\
-2015-12-12 00:18:43.545206\
-Venku(28-0114544b18ff):22.875\
-Doma(28-0114539c82ff):22.687\
-Koupelna(28-011453df6aff):23.0\
-#####\
-2015-12-12 00:18:51.072452\
-Venku(28-0114544b18ff):22.875\
-Doma(28-0114539c82ff):22.687\
-Koupelna(28-011453df6aff):23.0\
-#####\
-2015-12-12 00:18:59.489234\
-Venku(28-0114544b18ff):22.875\
-Doma(28-0114539c82ff):22.687\
-Koupelna(28-011453df6aff):23.0";
-console.info(temp.split("#####"))
+var temp = '[[{"thermometers": [{"id": "28-0114544b18ff", "temp": 22.375, "name": "Test"}, {"id": "28-0114539c82ff", "temp": 22.25, "name": "Koupelna"}, {"id": "28-011453df6aff", "temp": 22.437, "name": "123"}], "time": "2015-12-12 22:57:26.074001"}], [{"thermometers": [{"id": "28-0114544b18ff", "temp": 22.375, "name": "Test"}, {"id": "28-0114539c82ff", "temp": 22.25, "name": "Koupelna"}, {"id": "28-011453df6aff", "temp": 22.437, "name": "123"}], "time": "2015-12-12 22:57:33.511929"}], [{"thermometers": [{"id": "28-0114544b18ff", "temp": 22.375, "name": "Test"}, {"id": "28-0114539c82ff", "temp": 22.25, "name": "Koupelna"}, {"id": "28-011453df6aff", "temp": 22.437, "name": "123"}], "time": "2015-12-12 22:57:40.953404"}]]';
+var objects = JSON.parse(temp);
+console.info(objects)
 </script>
