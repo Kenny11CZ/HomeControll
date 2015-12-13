@@ -9,7 +9,8 @@ a {
 
 table{
 	border-collapse: collapse;
-	cellspacing: 0; 
+	cellspacing: 0;
+	width: 100%; 
 }
 table, td, tr{
 	border: 0;
