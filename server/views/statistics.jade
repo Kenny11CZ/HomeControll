@@ -2,6 +2,7 @@ extends layout
 
 block content
   h1 Statistics
+  a(href="/public/temperatures.txt" download) Download data
   table#thermometers
     thead
       tr
@@ -25,5 +26,11 @@ block content
         location.reload();
     });
     $(document).ready( function () {
-        $('#thermometers').DataTable();
+        //$('#thermometers').DataTable();
+        $('#thermometers').DataTable( {
+        "ajax": "/public/temperatures.txt",
+        "columns": [
+            { "data": "0.time" }
+        ]
+    } );
     } );
