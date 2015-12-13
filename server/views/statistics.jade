@@ -26,11 +26,5 @@ block content
         location.reload();
     });
     $(document).ready( function () {
-        //$('#thermometers').DataTable();
-        $('#thermometers').DataTable( {
-        "ajax": "/public/temperatures.txt",
-        "columns": [
-            { "data": "0.time" }
-        ]
-    } );
+        $('#thermometers').DataTable();
     } );
