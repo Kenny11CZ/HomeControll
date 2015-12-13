@@ -16,7 +16,6 @@ var server = app.listen(80, function () {
   console.log('Example app listening at http://%s:%s', host, port);
 });
 var io = require('socket.io')(server, { log: true });
-console.log(io)
 io.on('connection', function(client) {  
     console.log('Client connected...');
 
