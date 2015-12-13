@@ -28,6 +28,8 @@ def statistics(thermometers, time):
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
     print("Start measurement")
+    if not os.path.isfile("output.txt"):
+        os.system("touch output.txt")
     threading.Timer(time, LogTemperatures, [thermometers]).start()
 
 def pastebin():
