@@ -30,7 +30,7 @@ def statistics(thermometers, time):
     print("Start measurement")
     if not os.path.isfile("output.txt"):
         os.system("touch output.txt")
-    threading.Timer(time, LogTemperatures, [thermometers]).start()
+    LogTemperatures(thermometers)
 
 def pastebin():
     import requests, urllib
