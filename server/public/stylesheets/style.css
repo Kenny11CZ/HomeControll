@@ -9,6 +9,7 @@ a {
 
 table{
 	border-collapse: collapse;
+	cellspacing: 0; 
 }
 table, td, tr{
 	border: 0;
@@ -19,11 +20,12 @@ td, th{
 	text-align: left;
 	padding: 8px;
 }
-tr:nth-child(even) {background-color: #f2f2f2}
+.even {background-color: #edf7ed}
+tr:nth-child(odd) {background-color: #dbefdc}
 th{
     background-color: #4CAF50;
     color: white;
 }
 .name{
-	border-left: 1px solid #bbb;
+	background-color: #6fbf72;
 }

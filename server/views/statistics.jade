@@ -2,19 +2,20 @@ extends layout
 
 block content
   h1 Statistics
-  table
+  table#thermometers
     thead
       tr
-        th Time
-        th(colspan="#{data[0][0].thermometers.length*2}") Thermomethers
+        th(rowspan="2") Time
+        th(colspan="#{data[0][0].thermometers.length}") Thermomethers
+      tr
+        for thermometer in data[0][0].thermometers
+          th.name #{thermometer.name}
     tbody
       for record in data
         tr
           td 
             span.time #{record[0].time}
           for thermometer in record[0].thermometers
-            td.name
-              span #{thermometer.name}
             td.temp
               span #{thermometer.temp}
   script(src="/socket.io/socket.io.js")
@@ -23,3 +24,6 @@ block content
     socket.on('filechanged', function(data) {
         location.reload();
     });
+    $(document).ready( function () {
+        $('#thermometers').DataTable();
+    } );
