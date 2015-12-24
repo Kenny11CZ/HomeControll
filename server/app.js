@@ -22,7 +22,13 @@ io.on('connection', function(client) {
     client.on('join', function(data) {
         console.log(data);
     });
-
-    fs.watchFile('temperatures.txt', {persistent:true, interval:1000}, function(data){io.sockets.emit('filechanged', ''); console.log('filechanged')});
+    var timer = "";
+    fs.watchFile('temperatures.txt', {persistent:true, interval:1000}, 
+    	function(data){
+	    	timer = setTimeout(function(){
+	    		io.sockets.emit('filechanged', ''); 
+	    		console.log('filechanged');
+	    	}, 1200);
+	    });
 
 });

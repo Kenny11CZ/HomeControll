@@ -8,11 +8,16 @@ router.get('/', function(req, res, next) {
 router.get('/statistics', function(req, res, next) {
 	var fs = require("fs");
 	fs.readFile('temperatures.txt', function (err, data) {
-	   if (err) {
-	       return console.error(err);
-	       res.render('statistics', {data: ""});
-	   }
-	   res.render('statistics', {data: JSON.parse(data.toString())});
+	   	if (err) {
+	       	return console.error(err);
+	    	res.render('statistics', {data: ""});
+	   	}
+	   	var json = "{}";
+	   	try{
+			json = JSON.parse(data.toString());
+	   	}
+	   	catch{}
+	   	res.render('statistics', {data: JSON.parse(data.toString())});
 	});
 });
 router.use("/public", express.static('public'));
