@@ -16,7 +16,7 @@ router.get('/statistics', function(req, res, next) {
 	   	try{
 			json = JSON.parse(data.toString());
 	   	}
-	   	catch{}
+	   	
 	   	res.render('statistics', {data: JSON.parse(data.toString())});
 	});
 });
