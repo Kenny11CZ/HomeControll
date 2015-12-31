@@ -21,6 +21,9 @@ block content
           for thermometer in record[0].thermometers
             td.temp
               span #{thermometer.temp}
+  each file in files
+    a(href="/public/daily/#{file}" download) #{file}
+    br
   script(src="/socket.io/socket.io.js")
   script.
     var socket = io.connect(location.host+':80');
@@ -29,5 +32,4 @@ block content
     });
     $(document).ready( function () {
         $('#thermometers').DataTable();
-        console.info({files});
     } );
