@@ -25,7 +25,7 @@ def statistics(thermometers, time):
             f.write(json.dumps(data))
         result = str(datetime.datetime.now())
         for t in thermometers:
-            result += "," + t.GetTemp()
+            result += "," + str(t.GetTemp())
         result += ";\n"
         with open('output.csv', 'a+') as f:
             f.write(result)
