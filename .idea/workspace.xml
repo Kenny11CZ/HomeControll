@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45f5d8b1-8eb1-49e8-bbfc-0c16bf261a23" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modes.py" afterPath="$PROJECT_DIR$/modes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes.js" afterPath="$PROJECT_DIR$/server/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/statistics.jade" afterPath="$PROJECT_DIR$/server/views/statistics.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HomeControll.iws" />
@@ -1021,7 +1022,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451572728841</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Daily logs">
+      <created>1451573075345</created>
+      <option name="number" value="00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1451573075345</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="ToolWindowManager">

@@ -13,11 +13,16 @@ router.get('/statistics', function(req, res, next) {
 	    	res.render('statistics', {data: ""});
 	   	}
 	   	var json = "{}";
+	   	var files = "{}";
 	   	try{
 			json = JSON.parse(data.toString());
 	   	}
 	   	catch(e){}
-	   	res.render('statistics', {data: JSON.parse(data.toString())});
+	   	try{
+			files = fs.readdirSync("public/daily");
+	   	}
+	   	catch(e){}
+	   	res.render('statistics', {data: json, files: files});
 	});
 });
 router.use("/public", express.static('public'));
