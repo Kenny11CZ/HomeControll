@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 router.get('/statistics', function(req, res, next) {
 	var fs = require("fs");
-	fs.readFile('temperatures.txt', function (err, data) {
+	fs.readFile('public/temperatures.txt', function (err, data) {
 	   	if (err) {
 	       	return console.error(err);
 	    	res.render('statistics', {data: ""});

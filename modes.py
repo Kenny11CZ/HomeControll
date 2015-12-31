@@ -23,8 +23,15 @@ def statistics(thermometers, time):
         data.append(temp)
         with open('output.txt', 'w+') as f:
             f.write(json.dumps(data))
+        result = str(datetime.datetime.now())
+        for t in thermometers:
+            result += "," + t.GetTemp()
+        result += ";\n"
+        with open('output.csv', 'a+') as f:
+            f.write(result)
         os.system('cp output.txt server/public/temperatures.txt')
-	os.system('cp output.txt server/temperatures.txt')
+        os.system('cp output.csv server/public/temperatures.csv')
+	#os.system('cp output.txt server/temperatures.txt')
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
@@ -36,7 +43,7 @@ def statistics(thermometers, time):
         firstline = "Time"
         for t in thermometers:
             firstline += "," + t.description
-        firstline += ";"
+        firstline += ";\n"
         with open('output.csv', 'w+') as f:
             f.write(firstline)
     LogTemperatures(thermometers)
