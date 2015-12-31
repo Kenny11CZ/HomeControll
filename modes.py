@@ -11,6 +11,28 @@ def statistics(thermometers, time):
     iteration = [None]
     iteration[0] = 0
     def LogTemperatures(thermometers):
+
+        def WriteDaily(thermometers, text):
+            try:
+                if not os.path.isfile(filename+".csv"):
+                    if not os.path.isdir("server/daily"):
+                        os.system("mkdir server/daily")
+                    os.system("touch server/daily/"+filename+".csv")
+                    firstline = "Time"
+                    for t in thermometers:
+                        firstline += "," + t.description
+                    firstline += ";\n"
+                    with open(filename+'.csv', 'w+') as f:
+                        f.write(firstline)
+            except:
+                print "error while initialising daily log file"
+            try:
+                with open('output.csv', 'a+') as f:
+                    f.write(text)
+            except:
+                print "error while writing into daily log file"
+
+
         now = datetime.datetime.now()
         try:
             if now.strftime("%Y-%m-%d") != filename:
@@ -57,26 +79,6 @@ def statistics(thermometers, time):
         with open('output.csv', 'w+') as f:
             f.write(firstline)
 
-
-    def WriteDaily(thermometers, text):
-        try:
-            if not os.path.isfile(filename+".csv"):
-                if not os.path.isdir("server/daily"):
-                    os.system("mkdir server/daily")
-                os.system("touch server/daily/"+filename+".csv")
-                firstline = "Time"
-                for t in thermometers:
-                    firstline += "," + t.description
-                firstline += ";\n"
-                with open(filename+'.csv', 'w+') as f:
-                    f.write(firstline)
-        except:
-            print "error while initialising daily log file"
-        try:
-            with open('output.csv', 'a+') as f:
-                f.write(text)
-        except:
-            print "error while writing into daily log file"
 
     LogTemperatures(thermometers)
 
