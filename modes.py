@@ -31,6 +31,14 @@ def statistics(thermometers, time):
     print("Start measurement")
     if not os.path.isfile("output.txt"):
         os.system("touch output.txt")
+    if not os.path.isfile("output.csv"):
+        os.system("touch output.csv")
+        firstline = "Time"
+        for t in thermometers:
+            firstline += "," + t.description
+        firstline += ";"
+        with open('output.csv', 'w+') as f:
+            f.write(firstline)
     LogTemperatures(thermometers)
 
 def pastebin():
