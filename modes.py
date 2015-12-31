@@ -7,30 +7,30 @@ import json
 
 #Modes
 def statistics(thermometers, time):
-    filename = datetime.datetime.now().strftime("%Y-%m-%d")
+
     iteration = [None]
     iteration[0] = 0
     def LogTemperatures(thermometers):
-
+        filename = datetime.datetime.now().strftime("%Y-%m-%d")
         def WriteDaily(thermometers, text):
             try:
                 if not os.path.isfile(filename+".csv"):
-                    if not os.path.isdir("server/daily"):
-                        os.system("mkdir server/daily")
-                    os.system("touch server/daily/"+filename+".csv")
+                    if not os.path.isdir("server/public/daily"):
+                        os.system("mkdir server/public/daily")
+                    os.system("touch server/public/daily/"+filename+".csv")
                     firstline = "Time"
                     for t in thermometers:
                         firstline += "," + t.description
                     firstline += ";\n"
-                    with open(filename+'.csv', 'w+') as f:
+                    with open('server/public/daily/'+filename+'.csv', 'w+') as f:
                         f.write(firstline)
             except:
-                print "error while initialising daily log file"
+                print "error while initialising daily log file: " + sys.exc_info()[0]
             try:
                 with open('output.csv', 'a+') as f:
                     f.write(text)
             except:
-                print "error while writing into daily log file"
+                print "error while writing into daily log file: " + sys.exc_info()[0]
 
 
         now = datetime.datetime.now()
@@ -38,7 +38,7 @@ def statistics(thermometers, time):
             if now.strftime("%Y-%m-%d") != filename:
                 filename = now.strftime("%Y-%m-%d")
         except:
-            print "error with daily logs"
+            print "error with daily logs: " + sys.exc_info()[0]
         with open('output.txt', 'r+') as f:
             try:
                 data = json.load(f)
@@ -66,6 +66,8 @@ def statistics(thermometers, time):
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
+
+
     print("Start measurement")
     #Inicializace soubooru
     if not os.path.isfile("output.txt"):
