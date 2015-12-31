@@ -46,8 +46,8 @@
       <file leaf-file-name="modes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16951567" vertical-offset="544" max-vertical-offset="1768">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.16951567" vertical-offset="17" max-vertical-offset="1785">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
               <folding>
                 <element signature="e#21#36#0" expanded="true" />
               </folding>
@@ -991,7 +991,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451569461692</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Daily logs">
+      <created>1451571725349</created>
+      <option name="number" value="00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1451571725349</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1036,7 +1042,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="statistics 5" />
     <MESSAGE value="statistics 6" />
     <MESSAGE value="statistics 7" />
     <MESSAGE value="statistics 8" />
@@ -1061,7 +1066,8 @@
     <MESSAGE value="json" />
     <MESSAGE value="nodejs server" />
     <MESSAGE value="CSV export support" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSV export support" />
+    <MESSAGE value="Daily logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Daily logs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1252,8 +1258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16951567" vertical-offset="544" max-vertical-offset="1768">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.16951567" vertical-offset="17" max-vertical-offset="1785">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding>
             <element signature="e#21#36#0" expanded="true" />
           </folding>

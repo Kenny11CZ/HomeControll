@@ -4,9 +4,10 @@ import threading
 import os
 import json
 
-filename = datetime.datetime.now().strftime("%Y-%m-%d")
+
 #Modes
 def statistics(thermometers, time):
+    filename = datetime.datetime.now().strftime("%Y-%m-%d")
     iteration = [None]
     iteration[0] = 0
     def LogTemperatures(thermometers):
