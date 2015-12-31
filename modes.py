@@ -4,18 +4,25 @@ import threading
 import os
 import json
 
+filename = datetime.datetime.now().strftime("%Y-%m-%d")
 #Modes
 def statistics(thermometers, time):
     iteration = [None]
     iteration[0] = 0
     def LogTemperatures(thermometers):
+        now = datetime.datetime.now()
+        try:
+            if now.strftime("%Y-%m-%d") != filename:
+                filename = now.strftime("%Y-%m-%d")
+        except:
+            print "error with daily logs"
         with open('output.txt', 'r+') as f:
             try:
                 data = json.load(f)
             except:
                 data = list()
         temp = [None]
-        temp[0] = {"time":str(datetime.datetime.now())}
+        temp[0] = {"time":str(now)}
         therms = list()
         for i, t in enumerate(thermometers):
             therms.append({"id": t.file_id, "name": t.description, "temp": t.GetTemp()})
@@ -29,13 +36,15 @@ def statistics(thermometers, time):
         result += ";\n"
         with open('output.csv', 'a+') as f:
             f.write(result)
+
+        WriteDaily(thermometers, result)
         os.system('cp output.txt server/public/temperatures.txt')
         os.system('cp output.csv server/public/temperatures.csv')
-	#os.system('cp output.txt server/temperatures.txt')
         threading.Timer(time, LogTemperatures, [thermometers]).start()
         iteration[0] = iteration[0] + 1
         print("{0} iteration".format(iteration[0],))
     print("Start measurement")
+    #Inicializace soubooru
     if not os.path.isfile("output.txt"):
         os.system("touch output.txt")
     if not os.path.isfile("output.csv"):
@@ -46,6 +55,28 @@ def statistics(thermometers, time):
         firstline += ";\n"
         with open('output.csv', 'w+') as f:
             f.write(firstline)
+
+
+    def WriteDaily(thermometers, text):
+        try:
+            if not os.path.isfile(filename+".csv"):
+                if not os.path.isdir("server/daily"):
+                    os.system("mkdir server/daily")
+                os.system("touch server/daily/"+filename+".csv")
+                firstline = "Time"
+                for t in thermometers:
+                    firstline += "," + t.description
+                firstline += ";\n"
+                with open(filename+'.csv', 'w+') as f:
+                    f.write(firstline)
+        except:
+            print "error while initialising daily log file"
+        try:
+            with open('output.csv', 'a+') as f:
+                f.write(text)
+        except:
+            print "error while writing into daily log file"
+
     LogTemperatures(thermometers)
 
 def pastebin():
