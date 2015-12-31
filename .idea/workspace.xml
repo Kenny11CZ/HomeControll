@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45f5d8b1-8eb1-49e8-bbfc-0c16bf261a23" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes.js" afterPath="$PROJECT_DIR$/server/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/statistics.jade" afterPath="$PROJECT_DIR$/server/views/statistics.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -1028,7 +1027,19 @@
       <option name="project" value="LOCAL" />
       <updated>1451573075345</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Daily logs">
+      <created>1451573640776</created>
+      <option name="number" value="00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1451573640776</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Daily logs">
+      <created>1451573903383</created>
+      <option name="number" value="00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1451573903383</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="ToolWindowManager">
