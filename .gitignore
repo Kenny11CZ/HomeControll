@@ -1,4 +1,5 @@
 HomeControll.db
 output.txt
 server/temperatures.txt
+server/public/temperatures.txt
 server/node_modules
