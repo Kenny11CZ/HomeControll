@@ -30,8 +30,8 @@ results = parser.parse_args()
 
 #if not os.path.isfile("HomeControll.db"):
 #    FirstRun()
-else:
-    Initialize()
+#else:
+Initialize()
 
 active = None
 
