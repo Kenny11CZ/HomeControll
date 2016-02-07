@@ -5,32 +5,31 @@ block content
   a(href="/public/temperatures.txt" download) Download data (JSON)
   br
   a(href="/public/temperatures.csv" download) Download data (CSV)
-  //
-    table#thermometers
-      thead
-        tr
-          th(rowspan="2") Time
-          th(colspan="#{data[0][0].thermometers.length}") Thermomethers
-        tr
-          for thermometer in data[0][0].thermometers
-            th.name #{thermometer.name}
-      tbody
-        for record in data
-          tr
-            td 
-              span.time #{record[0].time}
-            for thermometer in record[0].thermometers
-              td.temp
-                span #{thermometer.temp}
+//  table#thermometers
+//    thead
+//      tr
+//        th(rowspan="2") Time
+//        th(colspan="#{data[0][0].thermometers.length}") Thermomethers
+//      tr
+//        for thermometer in data[0][0].thermometers
+//          th.name #{thermometer.name}
+//    tbody
+//      for record in data
+//        tr
+//          td 
+//            span.time #{record[0].time}
+//          for thermometer in record[0].thermometers
+//            td.temp
+//              span #{thermometer.temp}
   each file in files
     a(href="/public/daily/#{file}" download) #{file}
     br
-  script(src="/socket.io/socket.io.js")
-  script.
-    var socket = io.connect(location.host+':80');
-    socket.on('filechanged', function(data) {
-        location.reload();
-    });
-    $(document).ready( function () {
-        $('#thermometers').DataTable();
-    } );
+//  script(src="/socket.io/socket.io.js")
+//  script.
+//    var socket = io.connect(location.host+':80');
+//    socket.on('filechanged', function(data) {
+//        location.reload();
+//    });
+//    $(document).ready( function () {
+//        $('#thermometers').DataTable();
+//    } );
