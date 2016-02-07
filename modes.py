@@ -17,7 +17,7 @@ def statistics(thermometers, time):
             try:
                 if not os.path.isfile(pathDaily+"/"+filename+".csv"):
                     if not os.path.isdir(pathDaily):
-                        os.system("mkdir server/public/daily")
+                        os.system("mkdir "+pathDaily)
                     os.system("touch "+pathDaily+"/"+filename+".csv")
                     firstline = "Time"
                     for t in thermometers:
