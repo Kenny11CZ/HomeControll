@@ -25,12 +25,12 @@ def statistics(thermometers, time):
                     with open('server/public/daily/'+filename+'.csv', 'w+') as f:
                         f.write(firstline)
             except:
-                print "error while initialising daily log file: " + sys.exc_info()[0]
+                print "error while initialising daily log file."
             try:
                 with open('server/public/daily/'+filename+'.csv', 'a+') as f:
                     f.write(text)
             except:
-                print "error while writing into daily log file: " + sys.exc_info()[0]
+                print "error while writing into daily log file."
 
 
         now = datetime.datetime.now()
