@@ -14,6 +14,7 @@ def statistics(thermometers, time):
         filename = datetime.datetime.now().strftime("%Y-%m-%d")
         def WriteDaily(thermometers, text):
 	    pathDaily = os.path.abspath('server/public/daily/')
+	    print pathDaily
             try:
                 if not os.path.isfile(pathDaily+"/"+filename+".csv"):
                     if not os.path.isdir(pathDaily):
