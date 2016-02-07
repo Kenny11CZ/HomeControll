@@ -5,6 +5,7 @@ var app = express();
 
 var fs = require("fs");
 
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jade');
 app.use('/', routes);
 
