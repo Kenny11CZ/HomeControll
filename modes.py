@@ -13,21 +13,22 @@ def statistics(thermometers, time):
     def LogTemperatures(thermometers):
         filename = datetime.datetime.now().strftime("%Y-%m-%d")
         def WriteDaily(thermometers, text):
+	    pathDaily = os.path.abspath('server/public/daily/')
             try:
-                if not os.path.isfile("server/public/daily/"+filename+".csv"):
-                    if not os.path.isdir("server/public/daily"):
+                if not os.path.isfile(pathDaily+"/"+filename+".csv"):
+                    if not os.path.isdir(pathDaily):
                         os.system("mkdir server/public/daily")
-                    os.system("touch server/public/daily/"+filename+".csv")
+                    os.system("touch "+pathDaily+"/"+filename+".csv")
                     firstline = "Time"
                     for t in thermometers:
                         firstline += "," + t.description
                     firstline += ";\n"
-                    with open('server/public/daily/'+filename+'.csv', 'w+') as f:
+                    with open(pathDaily+'/'+filename+'.csv', 'w+') as f:
                         f.write(firstline)
             except:
                 print "error while initialising daily log file."
             try:
-                with open('server/public/daily/'+filename+'.csv', 'a+') as f:
+                with open(pathDaily+'/'+filename+'.csv', 'a+') as f:
                     f.write(text)
             except:
                 print "error while writing into daily log file."
