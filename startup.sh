@@ -1,3 +1,12 @@
 #!/bin/sh
-sleep 10
-sudo python3 simple_therm_logger.py
+### BEGIN INIT INFO
+# Provides:          startup
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+
+sudo python3 simple_therm_logger.py & >/dev/null
