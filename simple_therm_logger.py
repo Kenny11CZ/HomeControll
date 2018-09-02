@@ -47,22 +47,25 @@ def read_data():
 			filename = base_dir + "/" + t["device_id"] + "/w1_slave"
 			f = open(filename, "r")
 			d = f.read()
-			print(d)
 		except Exception as e:
 			d = {t["device_id"]: "-99"}
 		res["data"].append(d)
 	return res
 
 def save_data(data):
-	cursor = cnx.cursor()
-	add_temp = ("INSERT INTO thermometers (time, device_id, value) VALUES (%s, %s, %s)")
-	for t in data["data"]:
-		key = list(t.keys())[0]
-		data_temp = (data["time"], key, t[key])
-		cursor.execute(add_temp, data_temp)
-	cnx.commit()
-	cursor.close()
-	print("saved data")
+	try:
+		cursor = cnx.cursor()
+		add_temp = ("INSERT INTO thermometers (time, device_id, value) VALUES (%s, %s, %s)")
+		for t in data["data"]:
+			key = list(t.keys())[0]
+			data_temp = (data["time"], key, t[key])
+			cursor.execute(add_temp, data_temp)
+		cnx.commit()
+		cursor.close()
+		print("saved data")	
+	except Exception as e:
+		print("error: " + e)
+	
 
 def cycle():
 	while True:
