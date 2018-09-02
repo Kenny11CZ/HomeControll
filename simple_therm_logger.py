@@ -1,4 +1,5 @@
 import os
+import sys
 import glob
 import time
 import datetime
@@ -47,7 +48,7 @@ def init():
 	os.system('modprobe w1-therm')
 
 def get_dictionary():
-	f = open(dictionary_file, 'r')
+	f = open(sys.argv[0].split("simple_therm_logger.py")[0] + dictionary_file, 'r')
 	return json.load(f)
 
 init()
