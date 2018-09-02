@@ -57,7 +57,8 @@ def save_data(data):
 	cursor = cnx.cursor()
 	add_temp = ("INSERT INTO employees (time, device_id, value) VALUES (%s, %s, %s)")
 	for t in data["data"]:
-		data_temp = (data["time"], list(t.keys())[0], t)
+		key = list(t.keys())[0]
+		data_temp = (data["time"], key, t[key])
 		cursor.execute(add_temp, data_temp)
 	cnx.commit()
 	cursor.close()
