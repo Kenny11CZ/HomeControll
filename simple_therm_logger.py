@@ -27,9 +27,9 @@ def create_dictionary():
 	try:
 		cursor = cnx.cursor()
 		add_dict = ("INSERT INTO dictionary (device_id, name) VALUES (%s, %s)")
-		for t in thermometers:
+		for t in d["thermometers"]:
 			data_dict = (t["device_id"], t["name"])
-			cursor.execute(add_temp, data_temp)
+			cursor.execute(add_dict, data_dict)
 		cnx.commit()
 		cursor.close()	
 	except Exception as e:
