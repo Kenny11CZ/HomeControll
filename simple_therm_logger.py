@@ -10,6 +10,8 @@ base_dir = '/sys/bus/w1/devices/'
 
 # create_dictionary()
 
+cnx = mysql.connector.connect(user='root', password='root', host='localhost', database='monitoring')
+
 def create_dictionary():
 	d = {"thermometers": [{
 			"device_id": "28-0000067d28e2", 
@@ -22,10 +24,24 @@ def create_dictionary():
 			"name": "odtah nad krbem nahore"
 		},
 	]}
-	f = open(dictionary_file, 'w')
-	f.write(json.dumps(d))
-	f.close()
-
+	try:
+		cursor = cnx.cursor()
+		add_dict = ("INSERT INTO dictionary (device_id, name) VALUES (%s, %s)")
+		for t in thermometers:
+			data_dict = (t["device_id"], t["name"])
+			cursor.execute(add_temp, data_temp)
+		cnx.commit()
+		cursor.close()	
+	except Exception as e:
+		print("cannot save dict to database")
+	
+	try:
+		f = open(dictionary_file, 'w')
+		f.write(json.dumps(d))
+		f.close()	
+	except Exception as e:
+		print("cannot save dict to file")
+	
 def init():
 	os.system('modprobe w1-gpio')
 	os.system('modprobe w1-therm')
@@ -35,8 +51,6 @@ def get_dictionary():
 	return json.load(f)
 
 init()
-
-cnx = mysql.connector.connect(user='root', password='root', host='localhost', database='monitoring')
 
 dictionary = get_dictionary()
 
