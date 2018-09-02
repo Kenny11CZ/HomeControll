@@ -46,7 +46,7 @@ def read_data():
 		try:
 			filename = base_dir + "/" + t["device_id"] + "/w1_slave"
 			f = open(filename, "r")
-			d = f.read()
+			d = f.read().split("t=")[1]
 		except Exception as e:
 			d = {t["device_id"]: "-99"}
 		res["data"].append(d)
