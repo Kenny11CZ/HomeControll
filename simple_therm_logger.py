@@ -55,7 +55,7 @@ def read_data():
 
 def save_data(data):
 	cursor = cnx.cursor()
-	add_temp = ("INSERT INTO employees (time, device_id, value) VALUES (%s, %s, %s)")
+	add_temp = ("INSERT INTO thermometers (time, device_id, value) VALUES (%s, %s, %s)")
 	for t in data["data"]:
 		key = list(t.keys())[0]
 		data_temp = (data["time"], key, t[key])
