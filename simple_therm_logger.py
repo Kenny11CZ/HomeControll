@@ -1,6 +1,7 @@
 import os
 import glob
 import time
+import datetime
 import json
 import mysql.connector
  
@@ -58,7 +59,8 @@ def save_data(data):
 		add_temp = ("INSERT INTO thermometers (time, device_id, value) VALUES (%s, %s, %s)")
 		for t in data["data"]:
 			key = list(t.keys())[0]
-			data_temp = (data["time"], key, t[key])
+			time = datetime.datetime.fromtimestamp(data["time"]).strftime('%Y-%m-%d %H:%M:%S')
+			data_temp = (time, key, t[key])
 			cursor.execute(add_temp, data_temp)
 		cnx.commit()
 		cursor.close()
